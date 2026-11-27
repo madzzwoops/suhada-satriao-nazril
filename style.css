@@ -1,1 +1,288 @@
+/* Reset & Variabel Warna */
+:root {
+    --bg-dark: #0a0e17;
+    --bg-card: #131b2e;
+    --ps-blue: #0070d1;
+    --ps-cyan: #00d2ff;
+    --text-light: #f1f5f9;
+    --text-muted: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: rgba(10, 14, 23, 0.95);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1e293b;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--ps-cyan);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--ps-cyan);
+}
+
+/* Tombol */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--ps-blue), var(--ps-cyan));
+    color: #fff;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--ps-blue);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--ps-blue);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 0;
+    background: radial-gradient(circle at top, #172554 0%, var(--bg-dark) 70%);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Section Umum */
+section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--ps-cyan);
+}
+
+/* Pricing Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.featured {
+    border: 2px solid var(--ps-cyan);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.15);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--ps-cyan);
+    color: var(--bg-dark);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.price span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.card ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+}
+
+.card ul li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Game List */
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.game-item {
+    background-color: var(--bg-card);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    border-left: 4px solid var(--ps-blue);
+}
+
+/* Footer */
+footer {
+    background-color: #06090f;
+    text-align: center;
+    padding: 2.5rem 0;
+    border-top: 1px solid #1e293b;
+    color: var(--text-muted);
+}
+
+footer h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+/* Halaman Error 404 */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.error-container {
+    max-width: 500px;
+    background-color: var(--bg-card);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+}
+
+.error-code {
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--ps-cyan);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.error-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.error-container p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}
 
